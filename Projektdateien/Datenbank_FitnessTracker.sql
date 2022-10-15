@@ -43,7 +43,7 @@ REFERENCES Benutzer(BenutzerID)
 );
 
 CREATE TABLE Eigener_Fitnessplan (
-PlanID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+EPlanID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 Benutzername NVARCHAR(100) NOT NULL,
 Anzahl_uebungen INT,
 Dauer DATETIME,
@@ -54,11 +54,11 @@ REFERENCES Benutzer(BenutzerID)
 );
 
 CREATE TABLE Vorbereiteter_Fitnessplan (
-PlanID INT IDENTITY(1,1),
+VPlanID INT IDENTITY(1,1),
 BenutzerID INT,
 CONSTRAINT fk_benutzer_vorbereiteter_fitnessplan FOREIGN KEY (BenutzerID)
 REFERENCES Benutzer(BenutzerID),
-CONSTRAINT pk_benutzer_vorbereiteter_fitnessplan PRIMARY KEY (PlanID, BenutzerID),
+CONSTRAINT pk_benutzer_vorbereiteter_fitnessplan PRIMARY KEY (VPlanID, BenutzerID),
 Anzahl_uebungen INT,
 Dauer DATETIME,
 Schwierigkeit TINYINT,

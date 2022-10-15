@@ -13,4 +13,6 @@ GO
 --		('Robert Lewandowski', '1988-08-23', 'robert.lewandowski@gmail.com', 1000),
 --		('Anthony Davis', '1993-03-11', 'anthony.davis@yahoo.com', 800);
 
+INSERT INTO Vorbereiteter_Fitnessplan()
+
 SELECT * FROM Benutzer;
