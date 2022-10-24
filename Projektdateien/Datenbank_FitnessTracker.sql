@@ -5,20 +5,20 @@ GO
 USE FitnessTracker;
 GO
 
+IF OBJECT_ID('Trainingsession') IS NOT NULL
+	DROP TABLE Trainingsession;
+	GO
+
+IF OBJECT_ID('Uebung') IS NOT NULL
+	DROP TABLE Uebung;
+	GO
+
+IF OBJECT_ID('Training') IS NOT NULL
+	DROP TABLE Training;
+	GO
+
 IF OBJECT_ID('Benutzer') IS NOT NULL
 	DROP TABLE Benutzer;
-	GO
-
-IF OBJECT_ID('Performance') IS NOT NULL
-	DROP TABLE Performance;
-	GO
-
-IF OBJECT_ID('Eigener_Fitnessplan') IS NOT NULL
-	DROP TABLE Eigener_Fitnessplan;
-	GO
-
-IF OBJECT_ID('Vorbereiteter_Fitnessplan') IS NOT NULL
-	DROP TABLE Vorbereiteter_Fitnessplan;
 	GO
 
 CREATE TABLE Benutzer (
@@ -28,39 +28,29 @@ Geburtsdatum DATE,
 Email NVARCHAR(100),
 Tagesziel_in_Kcal INT
 );
+GO
 
-CREATE TABLE Performance (
-PerformanceID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Benutzername NVARCHAR(100) NOT NULL,
-Schritte INT,
-Dauer DATETIME,
+CREATE TABLE Training (
+TrainingID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Dauer INT,
 Kalorienverbrauch FLOAT,
-Durchschnittliche_Geschwindigkeit FLOAT,
-Distanz FLOAT,
 BenutzerID INT,
 CONSTRAINT fk_benutzer_performance FOREIGN KEY (BenutzerID)
 REFERENCES Benutzer(BenutzerID)
 );
+GO
 
-CREATE TABLE Eigener_Fitnessplan (
-EPlanID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Benutzername NVARCHAR(100) NOT NULL,
-Anzahl_uebungen INT,
+CREATE TABLE Uebung (
+UebungID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+Uebungname NVARCHAR(100) NOT NULL,
+Wiederholungen INT,
 Dauer DATETIME,
-Kalorienverbrauch FLOAT,
-BenutzerID INT,
-CONSTRAINT fk_benutzer_eigener_fitnessplan FOREIGN KEY (BenutzerID)
-REFERENCES Benutzer(BenutzerID)
 );
+GO
 
-CREATE TABLE Vorbereiteter_Fitnessplan (
-VPlanID INT IDENTITY(1,1),
-BenutzerID INT,
-CONSTRAINT fk_benutzer_vorbereiteter_fitnessplan FOREIGN KEY (BenutzerID)
-REFERENCES Benutzer(BenutzerID),
-CONSTRAINT pk_benutzer_vorbereiteter_fitnessplan PRIMARY KEY (VPlanID, BenutzerID),
-Anzahl_uebungen INT,
-Dauer DATETIME,
-Schwierigkeit TINYINT,
-Kalorienverbrauch FLOAT,
+CREATE TABLE Trainingsession (
+TrainingID INT,
+UebungID INT,
+CONSTRAINT pk_training_uebung PRIMARY KEY (TrainingID, UebungID)
 );
+GO
