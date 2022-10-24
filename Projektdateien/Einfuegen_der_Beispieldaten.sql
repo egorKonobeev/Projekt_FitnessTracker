@@ -13,6 +13,30 @@ GO
 --		('Robert Lewandowski', '1988-08-23', 'robert.lewandowski@gmail.com', 1000),
 --		('Anthony Davis', '1993-03-11', 'anthony.davis@yahoo.com', 800);
 
-INSERT INTO Vorbereiteter_Fitnessplan()
+--INSERT INTO Uebung(Uebungname,Wiederholungen,Dauer)
+--VALUES  ('Laufen', NULL, 10),
+--		('Plank', NULL, 1),
+--		('American Swing', 15, NULL),
+--		('Bankdruecken', 10, NULL),
+--		('Schulterdruecken', 10, NULL),
+--		('Dips', 10, NULL),
+--		('French Press', 10, NULL),
+--		('Trizepsstrecken', 10, NULL),
+--		('Ruderergometer', NULL, 10),
+--		('Beinpresse', NULL, 15);
+
+--INSERT INTO Training(BenutzerID, Dauer, Kalorienverbrauch)
+--VALUES  (1, 60, 200),
+--		(2, 90, 300),
+--		(3, 50, 250),
+--		(4, 45, 200),
+--		(5, 62, 325),
+--		(6, 88, 450),
+--		(7, 120, 1000),
+--		(8, 110, 800),
+--		(9, 115, 766),
+--		(10, 36, 150);
 
 SELECT * FROM Benutzer;
+SELECT * FROM Uebung;
+SELECT * FROM Training;
