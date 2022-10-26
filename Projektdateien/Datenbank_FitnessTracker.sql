@@ -32,7 +32,7 @@ GO
 
 CREATE TABLE Training (
 TrainingID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-Dauer INT,
+Dauer TIME,
 Kalorienverbrauch FLOAT,
 BenutzerID INT,
 CONSTRAINT fk_benutzer_performance FOREIGN KEY (BenutzerID)
@@ -44,7 +44,7 @@ CREATE TABLE Uebung (
 UebungID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 Uebungname NVARCHAR(100) NOT NULL,
 Wiederholungen INT,
-Dauer DATETIME,
+Dauer TIME,
 );
 GO
 

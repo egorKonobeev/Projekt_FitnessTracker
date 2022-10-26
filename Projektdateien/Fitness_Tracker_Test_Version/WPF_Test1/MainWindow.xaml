@@ -1,0 +1,49 @@
+﻿<Window x:Class="WPF_Test1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Test1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1">
+            
+            <!-- Login -->
+            <TextBlock Text="Log in" HorizontalAlignment="Center" FontWeight="Bold" Padding="2" Margin="0 0 0 10"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Grid.Column="1">
+
+                    <!-- Email -->
+                    <TextBlock Text="Email Adresse" Padding="2"/>
+                    <TextBox x:Name="email" Padding="2"/>
+
+                    <!-- Passwort -->
+                    <TextBlock Text="Passwort" Padding="2"/>
+                    <TextBox x:Name="passwort" Margin="0 0 0 10" Padding="2"/>
+
+                    <!-- Button ForgotYourPasswort -->
+                    <Button x:Name="Passwort_vergessen" Content="Passwort vergessen?" Click="Passwort_vergessen_Click" HorizontalAlignment="Center" FontSize="10" Padding="2"/>
+
+                </StackPanel>
+
+            </Grid>
+        </StackPanel>
+
+        <!-- Registrieren -->
+        <Button x:Name="registrieren" Grid.Row="2" Content="Kein Account? Registrieren" Click="registrieren_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0 0 0 10" Padding="5"/>
+
+    </Grid>
+</Window>
