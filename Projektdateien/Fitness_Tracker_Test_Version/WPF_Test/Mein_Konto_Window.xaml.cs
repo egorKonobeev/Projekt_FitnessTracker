@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 
-namespace WPF_Test1
+namespace WPF_Test
 {
     /// <summary>
     /// Interaction logic for Mein_Konto_Window.xaml
@@ -27,10 +27,29 @@ namespace WPF_Test1
         {
             string connetionString;
             SqlConnection cnn;
-            connetionString = @"Data Source=WIN-50GP30FGO75;Initial Catalog=Demodb;User ID=sa;Password=demol23";
+            connetionString = @"Server=OPOSSUM283\SQLEXPRESS;Database=FitnessTracker;Trusted_Connection=Yes;";
             cnn = new SqlConnection(connetionString);
             cnn.Open();
-            MessageBox.Show("Connection Open  !");
+            
+            SqlCommand command;
+            SqlDataReader reader;
+            string sqlAbfrage, output = "";
+
+            sqlAbfrage = "SELECT BenutzerID, Benutzername FROM Benutzer";
+
+            command = new SqlCommand(sqlAbfrage, cnn);
+
+            reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                output = output + reader.GetValue(0) + ". " + reader.GetValue(1) + "\n";
+            }
+
+            MessageBox.Show(output);
+
+            reader.Close();
+            command.Dispose();
             cnn.Close();
 
         }
