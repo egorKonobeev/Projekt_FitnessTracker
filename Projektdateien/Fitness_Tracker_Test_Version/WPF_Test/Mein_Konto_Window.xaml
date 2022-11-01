@@ -16,6 +16,7 @@
 
             <StackPanel Grid.Row="0">
                 <TextBlock x:Name="begruessung" Text="Hallo [Benutzername]" FontSize="16" HorizontalAlignment="Right" Padding="2" Margin="0 0 10 0"/>
+                <Label x:Name="benutzerID" Content="0" Visibility="Hidden"/>
             </StackPanel>
         </Grid>
     </Border>

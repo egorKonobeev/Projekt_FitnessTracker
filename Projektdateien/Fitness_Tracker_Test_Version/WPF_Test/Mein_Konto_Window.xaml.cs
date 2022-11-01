@@ -18,40 +18,42 @@ namespace WPF_Test
     /// </summary>
     public partial class Mein_Konto_Window : Window
     {
-        public Mein_Konto_Window()
+        
+        public Mein_Konto_Window(int benutzerIDValue)
         {
             InitializeComponent();
-        }
 
-        private void SQL_Click(object sender, RoutedEventArgs e)
-        {
+            benutzerID.Content = benutzerIDValue;
+
+            //Verbinden mit Server
             string connetionString;
             SqlConnection cnn;
             connetionString = @"Server=OPOSSUM283\SQLEXPRESS;Database=FitnessTracker;Trusted_Connection=Yes;";
             cnn = new SqlConnection(connetionString);
             cnn.Open();
-            
-            SqlCommand command;
-            SqlDataReader reader;
-            string sqlAbfrage, output = "";
 
-            sqlAbfrage = "SELECT BenutzerID, Benutzername FROM Benutzer";
+            //Benutzername Abfrage formulieren
+            SqlCommand commandBenutzername;
+            SqlDataReader dataReader;
+            string sqlBenutzernameAbfrage = "SELECT Benutzername FROM Benutzer WHERE BenutzerID=" + benutzerID.Content;
 
-            command = new SqlCommand(sqlAbfrage, cnn);
+            commandBenutzername = new SqlCommand(sqlBenutzernameAbfrage, cnn);
 
-            reader = command.ExecuteReader();
+            dataReader = commandBenutzername.ExecuteReader();
+            string benutzernameOutput = "";
 
-            while (reader.Read())
+            //Passendes Email finden
+            while (dataReader.Read())
             {
-                output = output + reader.GetValue(0) + ". " + reader.GetValue(1) + "\n";
+                benutzernameOutput = dataReader.GetString(0);
             }
 
-            MessageBox.Show(output);
+            dataReader.Close();
+            commandBenutzername.Dispose();
 
-            reader.Close();
-            command.Dispose();
-            cnn.Close();
 
+            begruessung.Text = "Hallo " + benutzernameOutput;
         }
+        
     }
 }

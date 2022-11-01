@@ -78,26 +78,25 @@ namespace WPF_Test
                 if (passwortOutput == passwort.Password)
                 {
                     //Benutzername Abfrage formulieren
-                    SqlCommand commandBenutzername;
-                    string sqlBenutzernameAbfrage = "SELECT Benutzername FROM Benutzer WHERE Email LIKE '" + email.Text + "'";
+                    SqlCommand commandBenutzerID;
+                    string sqlBenutzerIDAbfrage = "SELECT BenutzerID FROM Benutzer WHERE Email LIKE '" + email.Text + "'";
 
-                    commandBenutzername = new SqlCommand(sqlBenutzernameAbfrage, cnn);
+                    commandBenutzerID = new SqlCommand(sqlBenutzerIDAbfrage, cnn);
 
-                    dataReader = commandBenutzername.ExecuteReader();
-                    string benutzernameOutput = "";
+                    dataReader = commandBenutzerID.ExecuteReader();
+                    int benutzerIDOutput = 0;
 
                     //Passendes Passwort finden
                     while (dataReader.Read())
                     {
-                        benutzernameOutput = dataReader.GetString(0);
+                        benutzerIDOutput = (int)dataReader.GetValue(0);
                     }
 
                     dataReader.Close();
-                    commandBenutzername.Dispose();
+                    commandBenutzerID.Dispose();
 
 
-                    var win = new Mein_Konto_Window();
-                    win.begruessung.Text = "Hallo " + benutzernameOutput;
+                    var win = new Mein_Konto_Window(benutzerIDOutput);
                     win.Show();
                     this.Close();
                 }
