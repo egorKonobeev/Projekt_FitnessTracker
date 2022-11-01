@@ -26,6 +26,7 @@ BenutzerID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 Benutzername NVARCHAR(100) NOT NULL,
 Geburtsdatum DATE,
 Email NVARCHAR(100),
+Passwort NVARCHAR(100),
 Tagesziel_in_Kcal INT
 );
 GO

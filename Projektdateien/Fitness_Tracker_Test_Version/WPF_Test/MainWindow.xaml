@@ -15,8 +15,8 @@
 
         <StackPanel Grid.Row="1">
             
-            <!-- Login -->
-            <TextBlock Text="Log in" HorizontalAlignment="Center" FontWeight="Bold" Padding="2" Margin="0 0 0 10"/>
+            <!-- Anmelden -->
+            <TextBlock Text="Anmelden" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Padding="2" Margin="0 0 0 10"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -32,10 +32,10 @@
 
                     <!-- Passwort -->
                     <TextBlock Text="Passwort" Padding="2"/>
-                    <TextBox x:Name="passwort" Margin="0 0 0 10" Padding="2"/>
+                    <PasswordBox x:Name="passwort" Margin="0 0 0 10" Padding="2"/>
                     
                     <!-- Button Anmelden -->
-                    <Button x:Name="Login" Content="Anmelden" Click="Login_Click" HorizontalAlignment="Center" FontSize="10" Padding="2" Margin="0 0 0 10"/>
+                    <Button x:Name="Login" Content="Anmelden" Click="Login_Click"  HorizontalAlignment="Center" FontSize="10" Padding="2" Margin="0 0 0 10"/>
                     
                     <!-- Button ForgotYourPasswort -->
                     <Button x:Name="Passwort_vergessen" Content="Passwort vergessen?" Click="Passwort_vergessen_Click" HorizontalAlignment="Center" FontSize="10" Padding="2"/>

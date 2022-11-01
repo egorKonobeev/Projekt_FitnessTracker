@@ -1,0 +1,71 @@
+﻿<Window x:Class="WPF_Test.RegistrierungWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Test"
+        mc:Ignorable="d"
+        Title="RegistrierungWindow" Height="600" Width="400">
+    <Border Padding="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Registrieren -->
+            <TextBlock Text="Registrieren" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Padding="2" Margin="0 0 0 10"/>
+
+            <StackPanel Grid.Row="1">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Vorname -->
+                    <StackPanel Grid.Column="0" Margin="0 0 5 0">
+                        <TextBlock Text="Vorname*" Padding="2"/>
+                        <TextBox x:Name="vorname" Padding="2"/>
+                    </StackPanel>
+
+                    <!-- Nachname -->
+                    <StackPanel Grid.Column="1" Margin="5 0 0 0">
+                        <TextBlock Text="Nachname*" Padding="2"/>
+                        <TextBox x:Name="nachname" Padding="2"/>
+                    </StackPanel>
+
+                </Grid>
+                
+                <!-- Email -->
+                <TextBlock Text="Email Adresse*" Padding="2"/>
+                <TextBox x:Name="email" Padding="2"/>
+
+                <!-- Passwort -->
+                <TextBlock Text="Passwort*" Padding="2"/>
+                <PasswordBox x:Name="passwort" Margin="0 0 0 10" Padding="2"/>
+
+                <!-- Passwort wiederholen -->
+                <TextBlock Text="Passwort wiederholen*" Padding="2"/>
+                <PasswordBox x:Name="passwortWiederholen" Margin="0 0 0 10" Padding="2"/>
+                        
+                <!-- Geburtsdatum -->
+                <TextBlock Text="Geburtsdatum (TT.MM.JJJJ)" Padding="2"/>
+                <DatePicker x:Name="geburtsdatum"  Margin="0 0 0 10" Padding="2"/>
+
+                <!-- Tagesziel in Kcal -->
+                <TextBlock Text="Tagesziel in Kcal" Padding="2"/>
+                <TextBox x:Name="kcalTagesziel" Margin="0 0 0 10" Padding="2"/>
+
+                <!-- Button Registrieren -->
+                <Button x:Name="registrieren" Content="Registrieren" Click="registrieren_Click"  HorizontalAlignment="Center" Padding="2"/>
+                
+            </StackPanel>
+
+            <!-- *-markierte Felder -->
+            <TextBlock Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="*-markierte Felder sind Pflichtfelder" Padding="2"/>
+        </Grid>
+    </Border>
+</Window>

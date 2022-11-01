@@ -15,3 +15,5 @@ C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tr
 C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\WPF_Test\obj\Debug\WPF_Test.csproj.CoreCompileInputs.cache
 C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\WPF_Test\obj\Debug\WPF_Test.exe
 C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\WPF_Test\obj\Debug\WPF_Test.pdb
+C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\WPF_Test\obj\Debug\RegistrierungWindow.g.cs
+C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\WPF_Test\obj\Debug\RegistrierungWindow.baml

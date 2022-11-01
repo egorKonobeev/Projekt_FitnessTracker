@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:WPF_Test"
         mc:Ignorable="d"
         Title="Mein_Konto_Window" Height="600" Width="400">
-    <StackPanel>
+    <Border Padding="10">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="SQL" Content="Connect" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Click="SQL_Click"></Button>
+            <StackPanel Grid.Row="0">
+                <TextBlock x:Name="begruessung" Text="Hallo [Benutzername]" FontSize="16" HorizontalAlignment="Right" Padding="2" Margin="0 0 10 0"/>
+            </StackPanel>
         </Grid>
-    </StackPanel>
+    </Border>
 </Window>
