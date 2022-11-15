@@ -1,0 +1,7 @@
+C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\Datenerfassung in CSV-Datei\bin\Debug\Datenerfassung in CSV-Datei.exe.config
+C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\Datenerfassung in CSV-Datei\bin\Debug\Datenerfassung in CSV-Datei.exe
+C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\Datenerfassung in CSV-Datei\bin\Debug\Datenerfassung in CSV-Datei.pdb
+C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\Datenerfassung in CSV-Datei\obj\Debug\Datenerfassung in CSV-Datei.csproj.AssemblyReference.cache
+C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\Datenerfassung in CSV-Datei\obj\Debug\Datenerfassung in CSV-Datei.csproj.CoreCompileInputs.cache
+C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\Datenerfassung in CSV-Datei\obj\Debug\Datenerfassung in CSV-Datei.exe
+C:\Users\opossum\Desktop\HBFSWI\Projekt_FitnessTracker\Projektdateien\Fitness_Tracker_Test_Version\Datenerfassung in CSV-Datei\obj\Debug\Datenerfassung in CSV-Datei.pdb
